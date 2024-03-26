@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h2>Displaying Search Results for "{{ user_query }}"</h2>
+    <ol>
+        {% for url in urls %}
+            <li><a href={{ url }}>{{ url }}</a></li>
+        {% endfor %}
+    </ol>
+    <form action="/" method="get">
+        <button type="submit">Return to Search</button>
+    </form>
+</body>
+</html>
